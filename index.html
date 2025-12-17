@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inter NIT Sports</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-blue-950 text-white font-[Inter] p-8">
+
+  <!-- ================= HEADER ================= -->
+  <h1 class="text-4xl font-bold text-center mb-2">Inter NIT Points Table</h1>
+  <p class="text-center text-gray-400 mb-10">NIT Delhi</p>
+
+  <!-- ================= SPORTS DASHBOARD ================= -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+
+    <!-- Tug of War -->
+    <div onclick="switchSport('Tug of War')" data-sport="Tug of War"
+         class="sport-card rounded-xl border border-white/20 cursor-pointer
+                transition hover:scale-[1.02] bg-slate-800/40 backdrop-blur-xl">
+      <div class="p-8 text-center">
+        <h2 class="text-xl font-semibold">Tug of War</h2>
+      </div>
+    </div>
+
+    <!-- Kabaddi (Default Active) -->
+    <div onclick="switchSport('Kabaddi')" data-sport="Kabaddi"
+         class="sport-card rounded-xl border border-indigo-400 shadow-lg scale-105
+                cursor-pointer transition bg-slate-800/40 backdrop-blur-xl">
+      <div class="p-8 text-center">
+        <h2 class="text-xl font-semibold">Kabaddi</h2>
+      </div>
+    </div>
+
+    <!-- Power Lifting -->
+    <div onclick="switchSport('Power Lifting')" data-sport="Power Lifting"
+         class="sport-card rounded-xl border border-white/20 cursor-pointer
+                transition hover:scale-[1.02] bg-slate-800/40 backdrop-blur-xl">
+      <div class="p-8 text-center">
+        <h2 class="text-xl font-semibold">Power Lifting</h2>
+      </div>
+    </div>
+
+    <!-- Teams Button -->
+    <div onclick="openTeams()"
+         class="rounded-xl p-6 cursor-pointer
+                bg-slate-800/40 backdrop-blur-xl
+                border border-white/20
+                hover:scale-[1.03] transition">
+      <div class="flex items-center gap-4 justify-center">
+        <div class="h-12 w-12 rounded-full bg-indigo-500/20
+                    flex items-center justify-center text-indigo-400 text-xl">
+          👥
+        </div>
+        <div class="text-left">
+          <p class="text-sm text-gray-400 uppercase tracking-wide">Teams</p>
+          <p class="text-lg font-semibold">View All Teams</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= POOL TABLES ================= -->
+  <div id="poolTables" class="space-y-10 mt-10"></div>
+
+  <!-- ================= TEAMS OVERLAY ================= -->
+  <div id="teamsView"
+       class="fixed inset-0 bg-black/70 backdrop-blur-lg hidden z-50 overflow-y-auto p-10">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-semibold">All Teams</h2>
+        <button onclick="closeTeams()" class="text-2xl hover:text-red-400">✕</button>
+      </div>
+
+      <div id="teamsGrid"
+           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="teams.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
