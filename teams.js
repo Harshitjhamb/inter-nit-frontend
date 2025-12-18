@@ -29,5 +29,11 @@ const teams = [
   { id: "nit-kurukshetra", name: "NIT Kurukshetra", logo: "assets/logos/nit-kurukshetra.png", pool: "F" },
   { id: "nit-nagaland", name: "NIT Nagaland", logo: "assets/logos/nit-nagaland.png", pool: "F" },
   { id: "vnit-nagpur", name: "VNIT Nagpur", logo: "assets/logos/vnit-nagpur.png", pool: "F" },
-  { id: "nit-allahabad", name: "NIT Allahabad (MNNIT)", logo: "assets/logos/nit-allahabad.png", pool: "F" }
+  { id: "nit-allahabad", name: "NIT Allahabad (MNNIT)", logo: "assets/logos/nit-allahabad.png", pool: "F" },
+    {
+  id: "nit-andhra-pradesh",
+  name: "NIT Andhra Pradesh",
+  logo: "assets/logos/nit-andhra-pradesh.png",
+  pool: "E"
+}
 ];
